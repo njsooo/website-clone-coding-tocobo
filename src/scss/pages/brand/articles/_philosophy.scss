@@ -1,0 +1,62 @@
+#philosophy {
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+  letter-spacing: -0.05em;
+  .container {
+    @keyframes move-top {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transform: translateY(-50%);
+    .title {
+      color: $red;
+      font-size: 23px;
+    }
+    .desc {
+      margin-top: 55px;
+      color: $red;
+      font-weight: 500;
+      font-size: 27px;
+      line-height: 44px;
+      text-align: center;
+      br.mobile {
+        @include br-inline;
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #philosophy {
+    .container {
+      .title {
+        font-size: 16px;
+        line-height: 35px;
+      }
+      .desc {
+        margin-top: 35px;
+        font-size: 18px;
+        line-height: 28px;
+        .desktop {
+          display: none;
+        }
+        br.mobile {
+          display: block;
+        }
+      }
+    }
+  }
+}

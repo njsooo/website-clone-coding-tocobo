@@ -1,0 +1,128 @@
+#promotion {
+  position: relative;
+  padding-top: 205px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 379px;
+    background: linear-gradient(to top, #fff, $sky-blue);
+    z-index: -1;
+  }
+  .header {
+    text-align: center;
+    .greeting {
+      @include greeting;
+    }
+    .greeting-title {
+      @include greeting-title;
+
+      margin-top: 25px;
+    }
+  }
+  .content {
+    margin-top: 70px;
+    padding-bottom: 150px;
+    .promotion-list {
+      .promotion {
+        margin-top: 120px;
+        text-align: center;
+        &:first-child {
+          margin-top: 0;
+        }
+        .img-wrap {
+          overflow: hidden;
+          img {
+            transition: transform 0.5s;
+            &.mobile {
+              display: none;
+            }
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+        .metadata {
+          margin-top: 50px;
+          .type {
+            display: block;
+            color: $red;
+          }
+          .title {
+            margin-top: 16px;
+            color: $black;
+            font-size: 25px;
+            letter-spacing: -0.05em;
+          }
+          .date {
+            margin-top: 25px;
+            color: $light-gray;
+          }
+          .more {
+            @include btn-has-hover(293px, $btn-height, $red, #fff, $red, #fff, $red, #fff);
+
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #promotion {
+    padding-top: 115px;
+    &::before {
+      background: $sky-blue;
+    }
+    .header {
+      .greeting {
+        font-size: 14px;
+      }
+      .greeting-title {
+        margin-top: 15px;
+        font-size: 34px;
+      }
+    }
+    .content {
+      margin-top: 50px;
+      padding-bottom: 70px;
+      .promotion-list {
+        .promotion {
+          margin-top: 70px;
+          .img-wrap {
+            img {
+              &.desktop {
+                display: none;
+              }
+              &.mobile {
+                display: block;
+              }
+            }
+          }
+          .metadata {
+            .type {
+              font-size: 13px;
+              line-height: 1.1;
+            }
+            .title {
+              margin-top: 13px;
+              font-size: 20px;
+            }
+            .date {
+              margin-top: 20px;
+              font-size: 14px;
+            }
+            .more {
+              width: 240px;
+              height: 40px;
+              font-size: 12px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

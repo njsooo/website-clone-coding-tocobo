@@ -1,0 +1,40 @@
+#floating-links {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  li {
+    margin-top: 23px;
+    &:first-child {
+      margin-top: 0;
+    }
+    a {
+      color: $light-gray;
+      font-size: 18px;
+      &.on {
+        color: $red;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #floating-links {
+    top: auto;
+    right: auto;
+    bottom: 50px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    li {
+      margin-top: 20px;
+      a {
+        font-size: 16px;
+        &.on {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

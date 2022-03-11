@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOCOBO | Order Tracking</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOCOBO" />
+    <meta property="og:title" content="order tracking" />
+    <meta property="og:description" content="order tracking page" />
+    <meta property="og:image" content="./assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.tocobo.co.kr/" />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="TOCOBO" />
+    <meta property="twitter:title" content="order tracking" />
+    <meta property="twitter:description" content="order tracking page" />
+    <meta property="twitter:image" content="./assets/images/logo.jpg" />
+    <meta property="twitter:url" content="https://www.tocobo.co.kr/" />
+    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+  </head>
+  <body>
+    <%= require('html-loader!@/html/partials/header.html').default %>
+    <!-- MAIN -->
+    <main>
+      <!-- ORDER -->
+      <article id="order">
+        <div class="container">
+          <h2 class="title">Order Tracking</h2>
+          <form action="#">
+            <input type="text" placeholder="주문자명" title="주문자명" aria-required="true" />
+            <input
+              type="text"
+              placeholder="주문번호(하이픈-포함)"
+              title="주문번호(하이픈-포함)"
+              aria-required="true"
+            />
+            <input
+              type="password"
+              placeholder="비회원 주문 비밀번호"
+              title="비회원 주문 비밀번호"
+              aria-required="true"
+            />
+            <ul class="find-actions">
+              <li><a href="#">아이디찾기</a></li>
+              <li><a href="#">비밀번호찾기</a></li>
+              <li><a href="#">비회원 주문조회</a></li>
+            </ul>
+            <div class="buttons">
+              <button type="submit" class="submit">조회</button>
+              <a href="/join.html" class="join">JOIN</a>
+            </div>
+          </form>
+        </div>
+      </article>
+      <!-- // ORDER -->
+    </main>
+    <!-- // MAIN -->
+    <!-- FOOTER -->
+    <%= require('html-loader!@/html/partials/footer.html').default %>
+    <!-- MODAL SEARCH -->
+    <%= require('html-loader!@/html/partials/modal_search.html').default %>
+    <!-- RIGHT WING -->
+    <%= require('html-loader!@/html/partials/right_wing.html').default %>
+  </body>
+</html>

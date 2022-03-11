@@ -1,0 +1,97 @@
+#circles {
+  height: 100vh;
+  background-color: $sky-blue;
+  .container {
+    width: 49%;
+    max-width: 1280px;
+    .swiper-container {
+      top: 30%;
+      overflow: visible;
+      .swiper-slide {
+        &:nth-child(1) .item {
+          left: -50%;
+        }
+        &:nth-child(2) .item {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &:nth-child(3) .item {
+          right: -50%;
+        }
+        .item {
+          position: absolute;
+          .circle-wrap {
+            position: relative;
+            width: 266px;
+            height: 266px;
+            svg {
+              stroke: $red;
+            }
+            .title {
+              @include absolute-center;
+
+              color: $red;
+              font-weight: 600;
+              font-style: italic;
+              font-size: 30px;
+              font-family: "Source Serif Pro", "Noto Sans KR", serif;
+            }
+          }
+          .metadata {
+            margin-top: 50px;
+            letter-spacing: -0.05em;
+            text-align: center;
+            .title {
+              color: $red;
+              font-weight: 500;
+              font-size: 25px;
+            }
+            .desc {
+              margin-top: 20px;
+              color: $red;
+              font-size: 17px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #circles {
+    .container {
+      width: 100%;
+      .swiper-container {
+        overflow: hidden;
+        .swiper-slide {
+          &:nth-child(2) .item {
+            transform: none;
+          }
+          .item {
+            position: static;
+            .circle-wrap {
+              width: 220px;
+              height: 220px;
+              margin: 0 auto;
+              .title {
+                font-size: 25px;
+              }
+            }
+            .metadata {
+              margin-top: 30px;
+              .title {
+                font-size: 20px;
+              }
+              .desc {
+                font-size: 15px;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

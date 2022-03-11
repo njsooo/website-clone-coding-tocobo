@@ -1,0 +1,112 @@
+#login {
+  @include form-area;
+  .container {
+    form {
+      .find-actions {
+        @include form-find-actions;
+      }
+      .buttons {
+        margin-top: 30px;
+        > button {
+          font-size: 15px;
+          &.login {
+            @include btn(100%, $btn-height-in-form, $red, $red, #fff);
+          }
+          &.join {
+            @include btn(100%, $btn-height-in-form, $red, #fff, $red);
+
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .coupon {
+      margin-top: 50px;
+      text-align: center;
+      .desc {
+        color: $black;
+        font-weight: 500;
+        font-size: 18px;
+        font-family: "Noto Sans KR", sans-serif;
+        line-height: 31px;
+        letter-spacing: -0.05em;
+      }
+      svg {
+        width: 289px;
+        height: 203px;
+        margin-top: 29px;
+      }
+    }
+    .sns-login-area {
+      margin-top: 27px;
+      li {
+        &.kakao {
+          margin-bottom: 20px;
+          button {
+            @include btn(100%, $btn-height-in-form, #fee500, #fee500, #000);
+
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: -0.05em;
+            svg {
+              vertical-align: middle;
+              width: 20px;
+              height: 17px;
+            }
+          }
+        }
+        &.facebook {
+          display: inline-block;
+          width: calc(50% - 5px);
+          margin-right: 10px;
+          button {
+            @include btn(100%, $btn-height-in-form, #1877f2, #1877f2, #000);
+
+            position: relative;
+            svg {
+              @include absolute-center;
+
+              width: 9px;
+              height: 20px;
+            }
+          }
+        }
+        &.naver {
+          display: inline-block;
+          width: calc(50% - 5px);
+          button {
+            @include btn(100%, $btn-height-in-form, #2bb500, #2bb500, #000);
+
+            position: relative;
+            svg {
+              @include absolute-center;
+
+              width: 18px;
+              height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #login {
+    .container {
+      form {
+        .buttons {
+          margin-top: 40px;
+          > button {
+            &.login {
+              height: $btn-height;
+            }
+            &.join {
+              height: $btn-height;
+            }
+          }
+        }
+      }
+    }
+  }
+}

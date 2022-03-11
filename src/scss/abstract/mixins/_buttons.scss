@@ -1,0 +1,156 @@
+@mixin btn($width, $height, $border-color, $bg-color, $color) {
+  display: inline-block;
+  box-sizing: border-box;
+  width: $width;
+  height: $height;
+  border: 1px solid $border-color;
+  border-radius: 50px;
+  background-color: $bg-color;
+  color: $color;
+  line-height: $height;
+  text-align: center;
+  @content;
+}
+
+@mixin btn-has-hover($width, $height, $border-color, $bg-color, $color,
+$border-hover-color, $bg-hover-color, $hover-color, $transition-duration: 0.5s) {
+  @include btn($width, $height, $border-color, $bg-color, $color) {
+    transition:
+      border $transition-duration,
+      background-color $transition-duration,
+      color $transition-duration;
+    &:hover {
+      border-color: $border-hover-color;
+      background-color: $bg-hover-color;
+      color: $hover-color;
+    }
+  }
+  @content;
+}
+
+@mixin btn-gradient-start($width, $height, $border-color, $gradient-from, $gradient-to, $color,
+$border-hover-color, $bg-hover-color, $hover-color, $transition-duration: 0.5s) {
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $height;
+  border-radius: 50px;
+  text-align: center;
+  span {
+    position: relative;
+    color: $color;
+    line-height: $height + 2px;
+    transition: color $transition-duration;
+    z-index: 1;
+  }
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+    span {
+      color: $hover-color;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, $gradient-from, $gradient-to);
+    transition: opacity $transition-duration;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border-hover-color;
+    border-radius: inherit;
+    background-color: $bg-hover-color;
+    opacity: 0;
+    transition: opacity $transition-duration;
+  }
+  @content;
+}
+
+@mixin btn-gradient-end($width, $height, $border-color, $bg-color, $color,
+$border-hover-color, $hover-gradient-from, $hover-gradient-to, $hover-color, $transition-duration: 0.5s) {
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $height;
+  border-radius: 50px;
+  text-align: center;
+  span {
+    position: relative;
+    color: $color;
+    line-height: $height + 2px;
+    transition: color $transition-duration;
+    z-index: 1;
+  }
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+    span {
+      color: $hover-color;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border-color;
+    border-radius: inherit;
+    background-color: $bg-color;
+    transition: opacity $transition-duration;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, $hover-gradient-from, $hover-gradient-to);
+    opacity: 0;
+    transition: opacity $transition-duration;
+  }
+  @content;
+}
+
+@mixin btn-gradient-twinkle($width, $height, $border-color, $gradient-from, $gradient-to, $color,
+$border-hover-color, $bg-hover-color, $hover-color, $transition-duration: 0.8s) {
+  @include btn-gradient-start($width, $height, $border-color, $gradient-from, $gradient-to, $color,
+  $border-hover-color, $bg-hover-color, $hover-color, $transition-duration) {
+    &::after {
+      background-color: #fff;
+      transition:
+        background-color $transition-duration,
+        opacity $transition-duration;
+    }
+    &:hover {
+      &::after {
+        background-color: $bg-hover-color;
+      }
+    }
+  }
+  @content;
+}

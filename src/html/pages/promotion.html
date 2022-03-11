@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOCOBO | Promotion</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOCOBO" />
+    <meta property="og:title" content="promotion" />
+    <meta property="og:description" content="promotion page" />
+    <meta property="og:image" content="./assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.tocobo.co.kr/" />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="TOCOBO" />
+    <meta property="twitter:title" content="promotion" />
+    <meta property="twitter:description" content="promotion page" />
+    <meta property="twitter:image" content="./assets/images/logo.jpg" />
+    <meta property="twitter:url" content="https://www.tocobo.co.kr/" />
+    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+  </head>
+  <body>
+    <%= require('html-loader!@/html/partials/header.html').default %>
+    <!-- MAIN -->
+    <main>
+      <!-- PROMOTION -->
+      <article id="promotion">
+        <div class="header">
+          <p class="greeting">Hello❤️ We are TOCOBO!</p>
+          <h2 class="greeting-title">Promotion</h2>
+        </div>
+        <div class="content">
+          <div class="promotion-list">
+            <div class="promotion">
+              <div class="img-wrap">
+                <img
+                  class="desktop"
+                  src="./assets/images/promotion_1_desktop.jpg"
+                  alt="토코보 런칭 기념 샘플링 이벤트"
+                />
+                <img
+                  class="mobile"
+                  src="./assets/images/promotion_1_mobile.png"
+                  alt="토코보 런칭 기념 샘플링 이벤트"
+                />
+              </div>
+              <div class="metadata">
+                <span class="type">SAMPLING EVENT</span>
+                <h3 class="title">토코보 런칭 기념 샘플링 이벤트</h3>
+                <p class="date">
+                  2021.12.31<span class="blind">부터</span>
+                  ~ 2022.2.2
+                  <span class="blind">까지</span>
+                </p>
+                <a href="#" class="more">Discover More</a>
+              </div>
+            </div>
+            <div class="promotion">
+              <div class="img-wrap">
+                <img
+                  class="desktop"
+                  src="./assets/images/promotion_2_desktop.jpg"
+                  alt="공식 홈페이지 회원 혜택"
+                />
+                <img
+                  class="mobile"
+                  src="./assets/images/promotion_2_mobile.png"
+                  alt="공식 홈페이지 회원 혜택"
+                />
+              </div>
+              <div class="metadata">
+                <span class="type">EXCLUSIVE BENEFIT</span>
+                <h3 class="title">공식 홈페이지 회원 혜택</h3>
+                <p class="date">
+                  2021.12.31<span class="blind">부터</span>
+                  ~ 2022.2.2
+                  <span class="blind">까지</span>
+                </p>
+                <a href="#" class="more">Discover More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- // PROMOTION -->
+    </main>
+    <!-- // MAIN -->
+    <!-- FOOTER -->
+    <%= require('html-loader!@/html/partials/footer.html').default %>
+    <!-- MODAL SEARCH -->
+    <%= require('html-loader!@/html/partials/modal_search.html').default %>
+    <!-- RIGHT WING -->
+    <%= require('html-loader!@/html/partials/right_wing.html').default %>
+  </body>
+</html>

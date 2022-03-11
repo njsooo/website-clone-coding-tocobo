@@ -1,0 +1,65 @@
+#header {
+  &.white {
+    .nav {
+      .container {
+        .logo {
+          a {
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+        .btn-open-mobile-nav {
+          svg {
+            fill: #fff;
+          }
+        }
+        .left {
+          ul {
+            li {
+              a {
+                color: #fff;
+                &::after {
+                  background-color: #fff;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          > li {
+            &.lang {
+              > a {
+                svg {
+                  stroke: #fff;
+                }
+              }
+            }
+            &.search {
+              a {
+                svg {
+                  fill: #fff;
+                  stroke: #fff;
+                }
+              }
+            }
+            &.my-page {
+              a {
+                svg {
+                  stroke: #fff;
+                }
+              }
+            }
+            &.cart {
+              a {
+                svg {
+                  stroke: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

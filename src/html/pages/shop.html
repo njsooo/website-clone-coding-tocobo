@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOCOBO | Shop</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOCOBO" />
+    <meta property="og:title" content="shop" />
+    <meta property="og:description" content="shop page" />
+    <meta property="og:image" content="./assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.tocobo.co.kr/" />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="TOCOBO" />
+    <meta property="twitter:title" content="shop" />
+    <meta property="twitter:description" content="shop page" />
+    <meta property="twitter:image" content="./assets/images/logo.jpg" />
+    <meta property="twitter:url" content="https://www.tocobo.co.kr/" />
+    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+  </head>
+  <body>
+    <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden">
+      <symbol id="heart-on" width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <ellipse cx="17" cy="17.0003" rx="17" ry="16.5405" fill="white" />
+        <path
+          d="M23.0309 12.5481C22.6708 12.2132 22.2434 11.9476 21.773 11.7664C21.3025 11.5852 20.7983 11.4919 20.289 11.4919C19.7798 11.4919 19.2755 11.5852 18.8051 11.7664C18.3346 11.9476 17.9072 12.2132 17.5472 12.5481L16.8001 13.2426L16.0529 12.5481C15.3258 11.8721 14.3395 11.4923 13.3111 11.4923C12.2827 11.4923 11.2965 11.8721 10.5693 12.5481C9.84212 13.224 9.43359 14.1409 9.43359 15.0969C9.43359 16.0529 9.84212 16.9697 10.5693 17.6457L11.3164 18.3402L16.8001 23.4379L22.2837 18.3402L23.0309 17.6457C23.391 17.311 23.6767 16.9137 23.8717 16.4764C24.0666 16.039 24.1669 15.5703 24.1669 15.0969C24.1669 14.6235 24.0666 14.1547 23.8717 13.7174C23.6767 13.2801 23.391 12.8827 23.0309 12.5481Z"
+          fill="url(#paint0_linear_1194_44001)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1194_44001"
+            x1="16.8003"
+            y1="11.4919"
+            x2="16.8003"
+            y2="23.4379"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#FF7777" />
+            <stop offset="1" stop-color="#DC272D" />
+          </linearGradient>
+        </defs>
+      </symbol>
+      <symbol id="heart-off" width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <ellipse cx="17" cy="17.0003" rx="17" ry="16.5405" fill="url(#paint0_linear_1805_48883)" />
+        <path
+          d="M23.0309 12.5481C22.6709 12.2132 22.2434 11.9476 21.773 11.7664C21.3025 11.5852 20.7983 11.4919 20.289 11.4919C19.7798 11.4919 19.2755 11.5852 18.8051 11.7664C18.3346 11.9476 17.9072 12.2132 17.5472 12.5481L16.8001 13.2426L16.0529 12.5481C15.3258 11.8721 14.3395 11.4923 13.3111 11.4923C12.2827 11.4923 11.2965 11.8721 10.5693 12.5481C9.84212 13.224 9.43359 14.1409 9.43359 15.0969C9.43359 16.0529 9.84212 16.9697 10.5693 17.6457L11.3164 18.3402L16.8001 23.4379L22.2837 18.3402L23.0309 17.6457C23.391 17.311 23.6767 16.9137 23.8717 16.4764C24.0666 16.039 24.1669 15.5703 24.1669 15.0969C24.1669 14.6235 24.0666 14.1547 23.8717 13.7174C23.6767 13.2801 23.391 12.8827 23.0309 12.5481V12.5481Z"
+          fill="white"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1805_48883"
+            x1="17"
+            y1="0.459717"
+            x2="17"
+            y2="33.5408"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#FF7777" />
+            <stop offset="1" stop-color="#DC272D" />
+          </linearGradient>
+        </defs>
+      </symbol>
+    </svg>
+    <%= require('html-loader!@/html/partials/header.html').default %>
+    <!-- MAIN -->
+    <main>
+      <!-- SHOP -->
+      <article id="shop">
+        <div class="header">
+          <div class="container">
+            <p class="greeting">Hello❤️ We are TOCOBO!</p>
+            <h2 class="greeting-title">Follow Your Intuition</h2>
+            <nav class="nav swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="#" class="on">All Product</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Toner</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Essence</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Cream</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Set</a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="#">Etc</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="content">
+          <div class="container">
+            <div class="view-mode">
+              <div class="left">
+                <span class="total-text">Total</span>
+                <span class="count">5</span>
+              </div>
+              <div class="right">
+                <button type="button" class="btn-big-view on" aria-label="상품 크게 보기"></button>
+                <button type="button" class="btn-small-view" aria-label="상품 작게 보기">
+                  <span class="cross"></span>
+                </button>
+              </div>
+            </div>
+            <ul class="item-list big-view">
+              <li class="item">
+                <div class="img-wrap">
+                  <a href="#">
+                    <img src="./assets/images/product_5.png" alt="" />
+                  </a>
+                </div>
+                <div class="metadata">
+                  <a href="#">
+                    <span class="type">신규회원 샘플 이벤트</span>
+                    <span class="name-en">TOCOBO Welcome Kit</span>
+                    <span class="name-ko">스킨케어 3종 샘플 키트</span>
+                    <span class="size">4ml+2ml+2ml</span>
+                    <div class="prices">
+                      <span class="price">0won</span>
+                    </div>
+                  </a>
+                </div>
+                <button type="button" class="btn-add-to-cart">
+                  <span>ADD TO CART</span>
+                  <svg class="heart-on">
+                    <use href="#heart-on"></use>
+                  </svg>
+                  <svg class="heart-off">
+                    <use href="#heart-off"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="item">
+                <div class="img-wrap">
+                  <a href="#">
+                    <img src="./assets/images/product_4.png" alt="" />
+                  </a>
+                </div>
+                <div class="metadata">
+                  <a href="#">
+                    <span class="type">각질 정돈 및 고보습 기초 세트</span>
+                    <span class="name-en">Basic Trio Set</span>
+                    <span class="name-ko">베이직 트리오 세트</span>
+                    <span class="size">150ml+50ml+50ml</span>
+                    <div class="prices">
+                      <span class="discount">10%</span>
+                      <span class="price">78,000won</span>
+                    </div>
+                  </a>
+                </div>
+                <button type="button" class="btn-add-to-cart">
+                  <span>ADD TO CART</span>
+                  <svg class="heart-on">
+                    <use href="#heart-on"></use>
+                  </svg>
+                  <svg class="heart-off">
+                    <use href="#heart-off"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="item">
+                <div class="img-wrap">
+                  <a href="#">
+                    <img src="./assets/images/product_3.png" alt="" />
+                  </a>
+                </div>
+                <div class="metadata">
+                  <a href="#">
+                    <span class="type">고밀도 10층 보습 크림</span>
+                    <span class="name-en">Multi Ceramide Cream</span>
+                    <span class="name-ko">멀티 세라마이드 크림</span>
+                    <span class="size">50ml</span>
+                    <div class="prices">
+                      <span class="price">30,000won</span>
+                    </div>
+                  </a>
+                </div>
+                <button type="button" class="btn-add-to-cart">
+                  <span>ADD TO CART</span>
+                  <svg class="heart-on">
+                    <use href="#heart-on"></use>
+                  </svg>
+                  <svg class="heart-off">
+                    <use href="#heart-off"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="item">
+                <div class="img-wrap">
+                  <a href="#">
+                    <img src="./assets/images/product_2.png" alt="" />
+                  </a>
+                </div>
+                <div class="metadata">
+                  <a href="#">
+                    <span class="type">피부 장벽 강화 유산균 에센스</span>
+                    <span class="name-en">Bifida Biome Essence</span>
+                    <span class="name-ko">비피다 바이옴 에센스</span>
+                    <span class="size">50ml</span>
+                    <div class="prices">
+                      <span class="price">32,000won</span>
+                    </div>
+                  </a>
+                </div>
+                <button type="button" class="btn-add-to-cart">
+                  <span>ADD TO CART</span>
+                  <svg class="heart-on">
+                    <use href="#heart-on"></use>
+                  </svg>
+                  <svg class="heart-off">
+                    <use href="#heart-off"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="item">
+                <div class="img-wrap">
+                  <a href="#">
+                    <img src="./assets/images/product_1.png" alt="" />
+                  </a>
+                </div>
+                <div class="metadata">
+                  <a href="#">
+                    <span class="type">저자극 데일리 각질 케어 토너</span>
+                    <span class="name-en">AHA BHA Lemon Toner</span>
+                    <span class="name-ko">아하 바하 레몬 토너</span>
+                    <span class="size">150ml</span>
+                    <div class="prices">
+                      <span class="price">25,000won</span>
+                    </div>
+                  </a>
+                </div>
+                <button type="button" class="btn-add-to-cart">
+                  <span>ADD TO CART</span>
+                  <svg class="heart-on">
+                    <use href="#heart-on"></use>
+                  </svg>
+                  <svg class="heart-off">
+                    <use href="#heart-off"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <!-- // SHOP -->
+    </main>
+    <!-- // MAIN -->
+    <!-- FOOTER -->
+    <%= require('html-loader!@/html/partials/footer.html').default %>
+    <!-- MODAL SEARCH -->
+    <%= require('html-loader!@/html/partials/modal_search.html').default %>
+    <!-- RIGHT WING -->
+    <%= require('html-loader!@/html/partials/right_wing.html').default %>
+    <!-- MODAL CART -->
+    <div id="modal-cart">
+      <div class="bg"></div>
+      <div class="content">
+        <div class="header">
+          <button type="button" class="btn-close">
+            <svg>
+              <use href="./assets/icons/svg_sprite_sheet.svg#btn-close-x-circle"></use>
+            </svg>
+            <span class="blind">장바구니창 닫기</span>
+          </button>
+          <h2 class="title">My Cart</h2>
+        </div>
+        <div class="body">
+          <a href="#" class="banner">
+            <img src="./assets/images/modal_cart_banner.png" alt="광고 무료 샘플" />
+          </a>
+          <ul class="item-list">
+            <!-- ITEM TEMPLATE -->
+            <!-- <li class="item">
+                <a href="#" class="img-wrap">
+                  <img src="./assets/images/product_1.png" alt="" />
+                </a>
+                <div class="metadata">
+                  <a href="#" class="name">
+                    <span>아하 바하 레몬 토너</span>
+                  </a>
+                  <div class="amount">
+                    <span class="text-ko">수량</span>
+                    <span class="num">1</span>
+                  </div>
+                  <span class="price">25,000won</span>
+                </div>
+              </li> -->
+          </ul>
+          <div class="buttons">
+            <a href="#" class="check-out">CHECK OUT</a>
+            <div class="wrap">
+              <a href="#" class="cart">CART</a>
+              <a href="javascript:void(0);" class="btn-close" role="button">쇼핑계속하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // MODAL CART -->
+  </body>
+</html>

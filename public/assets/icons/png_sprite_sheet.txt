@@ -1,0 +1,55 @@
+.sprite {
+  width: 303px;
+  height: 198px
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-instagram-comment {
+  width: 14px;
+  height: 14px;
+  background-position: -5px -5px;
+}
+
+.sprite-instagram-heart {
+  width: 14px;
+  height: 14px;
+  background-position: -29px -5px;
+}
+
+.sprite-mobile-nav-close {
+  width: 94px;
+  height: 99px;
+  background-position: -53px -5px;
+}
+
+.sprite-mobile-nav-sub-menu-close {
+  width: 80px;
+  height: 34px;
+  background-position: -5px -114px;
+}
+
+.sprite-modal-search-close {
+  width: 32px;
+  height: 32px;
+  background-position: -95px -114px;
+}
+
+.sprite-notice-close {
+  width: 15px;
+  height: 15px;
+  background-position: -157px -5px;
+}
+
+.sprite-review-desktop-star {
+  width: 116px;
+  height: 24px;
+  background-position: -182px -5px;
+}
+
+.sprite-review-mobile-start {
+  width: 180px;
+  height: 37px;
+  background-position: -95px -156px;
+}

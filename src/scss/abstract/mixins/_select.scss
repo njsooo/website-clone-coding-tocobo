@@ -1,0 +1,22 @@
+@mixin select-wrap {
+  position: relative;
+  &::before {
+    @include icon-arrow(8px, 8px, 1px, $light-gray, transparent, 45deg);
+  }
+}
+
+@mixin select {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: $sky-blue;
+  color: $light-gray;
+  font-size: 14px;
+  appearance: none;
+  &:focus {
+    outline: 1px solid $blue;
+    background-color: #fff;
+  }
+}

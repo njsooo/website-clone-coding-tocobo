@@ -1,0 +1,145 @@
+#modal-search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: color.adjust($sky-blue, $alpha: -0.1);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  &.on {
+    opacity: 1;
+  }
+  .icon-follow-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: url("./assets/icons/png_sprite_sheet.png") -95px -114px;
+    pointer-events: none;
+    z-index: 100;
+  }
+  .btn-close {
+    display: none;
+  }
+  .content {
+    @include absolute-center;
+    form {
+      position: relative;
+      .input-search {
+        box-sizing: border-box;
+        width: 650px;
+        height: 86px;
+        border: 1px solid $red;
+        outline: 0;
+        color: $red;
+        font-size: 30px;
+        letter-spacing: 1px;
+        text-indent: 25px;
+        &::placeholder {
+          color: $red;
+          font-style: italic;
+          font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+        }
+      }
+      .btn-submit {
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        width: 29px;
+        height: 30px;
+        svg {
+          fill: $red;
+          stroke: $red;
+        }
+      }
+    }
+    .popular-keyword {
+      margin-top: 60px;
+      letter-spacing: -0.05em;
+      .title {
+        color: $blue;
+      }
+      .keyword {
+        display: table;
+        margin-top: 20px;
+        text-align: center;
+        li {
+          display: inline-block;
+          a {
+            @include btn-has-hover(auto, 42px, transparent, $blue, #fff, $blue, #fff, $blue, 0.3s);
+
+            margin: 0 10px 12px 0;
+            padding: 0 23px;
+            font-size: 15px;
+            line-height: 43px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #modal-search {
+    background-color: $sky-blue;
+    backdrop-filter: none;
+    .btn-close {
+      position: absolute;
+      top: 29px;
+      right: 20px;
+      display: block;
+      width: 48px;
+      height: 48px;
+    }
+    .icon-follow-cursor {
+      display: none;
+    }
+    .content {
+      top: 30%;
+      left: 0;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 20px;
+      transform: none;
+      form {
+        .input-search {
+          width: 100%;
+          height: 60px;
+          font-size: 20px;
+          text-indent: 17px;
+          &::placeholder {
+            color: $red;
+            font-style: italic;
+            font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+          }
+        }
+        .btn-submit {
+          top: 15px;
+          right: 20px;
+        }
+      }
+      .popular-keyword {
+        margin-top: 40px;
+        .title {
+          font-weight: 600;
+          font-size: 15px;
+          text-align: center;
+        }
+        .keyword {
+          li {
+            a {
+              height: 40px;
+              margin-right: 5px;
+              line-height: 42px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

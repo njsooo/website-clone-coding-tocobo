@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOCOBO | Brand</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOCOBO" />
+    <meta property="og:title" content="brand" />
+    <meta property="og:description" content="brand page" />
+    <meta property="og:image" content="./assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.tocobo.co.kr/" />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="TOCOBO" />
+    <meta property="twitter:title" content="brand" />
+    <meta property="twitter:description" content="brand page" />
+    <meta property="twitter:image" content="./assets/images/logo.jpg" />
+    <meta property="twitter:url" content="https://www.tocobo.co.kr/" />
+    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+  </head>
+  <body>
+    <%= require('html-loader!@/html/partials/header_white.html').default %>
+    <!-- MAIN -->
+    <main>
+      <!-- LOGO INTRO -->
+      <article id="logo-intro">
+        <svg class="logo">
+          <use href="./assets/icons/svg_sprite_sheet.svg#logo"></use>
+        </svg>
+      </article>
+      <!-- // LOGO INTRO -->
+      <!-- TYPING INTRO -->
+      <article id="typing-intro">
+        <div class="container">
+          <div class="center">
+            <h2 class="title">Follow Your Intuition</h2>
+            <div class="desc">통찰력을 바탕으로 명료한 제품을 만듭니다</div>
+          </div>
+          <div class="tags">
+            <span>#Insight</span>
+            <span>#Intuition</span>
+          </div>
+        </div>
+      </article>
+      <!-- // TYPING INTRO -->
+      <!-- PHILOSOPHY -->
+      <article id="philosophy">
+        <div class="container">
+          <h2 class="title">Philosophy</h2>
+          <p class="desc">
+            토코보는 본질을 중시하며,<br class="mobile" />
+            직관을 바탕으로 만든 브랜드 입니다.<br />
+            당신은 직감적으로 좋은 제품을 알아봅니다.<br /><br />토코보 팀의 뷰티 인사이트는<br
+              class="mobile"
+            />
+            과거부터 현재까지 계속 업데이트되고 있으며<br />
+            전 제품에는 아름다움에 대한 통찰이<br class="mobile" />
+            담겨있습니다 .
+          </p>
+        </div>
+      </article>
+      <!-- // PHILOSOPHY -->
+      <!-- CIRCLES -->
+      <article id="circles">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="item">
+                  <div class="circle-wrap">
+                    <svg viewBox="0 0 266 266">
+                      <circle class="circle" cx="133" cy="133" r="132" />
+                    </svg>
+                    <span class="title">Clarity</span>
+                  </div>
+                  <div class="metadata">
+                    <div class="title">명료성</div>
+                    <p class="desc">
+                      한눈에 좋은 제품을 파악할 수 있도록<br />직관적으로 기획합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                  <div class="circle-wrap">
+                    <svg viewBox="0 0 266 266">
+                      <circle class="circle" cx="133" cy="133" r="132" />
+                    </svg>
+                    <span class="title">Modernity</span>
+                  </div>
+                  <div class="metadata">
+                    <div class="title">동시대성</div>
+                    <p class="desc">트렌드와 니즈를<br />빠르게 캐치하여 제작합니다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="item">
+                  <div class="circle-wrap">
+                    <svg viewBox="0 0 266 266">
+                      <circle class="circle" cx="133" cy="133" r="132" />
+                    </svg>
+                    <span class="title">Satisfaction</span>
+                  </div>
+                  <div class="metadata">
+                    <div class="title">만족감</div>
+                    <p class="desc">제품력과 정서적 만족감<br />두가지를 모두 충족합니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- // CIRCLES -->
+    </main>
+    <!-- // MAIN -->
+    <!-- MODAL SEARCH -->
+    <%= require('html-loader!@/html/partials/modal_search.html').default %>
+    <!-- RIGHT WING -->
+    <%= require('html-loader!@/html/partials/right_wing.html').default %>
+    <ul id="floating-links">
+      <li>
+        <a href="#" class="on">Brand Story</a>
+      </li>
+      <li><a href="#">Collection</a></li>
+    </ul>
+  </body>
+</html>

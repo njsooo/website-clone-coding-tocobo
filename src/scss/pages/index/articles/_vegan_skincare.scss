@@ -1,0 +1,142 @@
+// img ratio width:height 75:53
+$img-height-over-width: 0.70666667;
+$img-responsive-width: 39.05vw;
+
+#vegan-skincare {
+  $container-padding-top: 140px;
+  $img-width: 750px;
+  .container {
+    position: relative;
+    padding: $container-padding-top 0 190px;
+    .text-area {
+      .title {
+        color: $blue;
+        font-size: 55px;
+      }
+      .desc {
+        margin-top: 25px;
+        color: $dark-black;
+        line-height: 26px;
+        letter-spacing: -0.05em;
+      }
+      .more {
+        @include btn-gradient-start(230px, $btn-height, #fff, #51caff, $blue, #fff, $blue, #fff, $blue);
+
+        margin-top: 58px;
+      }
+    }
+    .swiper-container {
+      position: absolute;
+      top: $container-padding-top;
+      left: 40.5%;
+      width: calc($img-width * 2);
+      .swiper-slide {
+        width: auto;
+        img {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  #vegan-skincare {
+    .container {
+      // 240px: .text-area height
+      // 100px: area want to overflow
+      padding-bottom: calc($img-responsive-width * $img-height-over-width - 240px - 100px);
+      .swiper-container {
+        .swiper-slide {
+          width: $img-responsive-width;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  #vegan-skincare {
+    .container {
+      // 222px:  .text-area height decreased because of .desc margin-top changed
+      //  50px:  area want to overflow
+      // -23px:  90px(.container padding-top) minus 67px(.swiper-container top)
+      padding: 90px 0 calc($img-responsive-width * $img-height-over-width - 222px - 50px - 23px);
+      .text-area {
+        .more {
+          margin-top: 40px;
+        }
+      }
+      .swiper-container {
+        top: 67px;
+        left: 43%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  #vegan-skincare {
+    .container {
+      width: 89%;
+      max-width: 1280px;
+    }
+  }
+}
+
+@include media-tablet-width {
+  #vegan-skincare {
+    .container {
+      width: 100%;
+      padding: 90px 0 0;
+      .text-area {
+        text-align: center;
+      }
+      .swiper-container {
+        position: static;
+        width: 100%;
+        margin: 50px 0 0 44%;
+        .swiper-slide {
+          width: 42.8%;
+        }
+      }
+    }
+  }
+}
+
+@include media-phone-width {
+  #vegan-skincare {
+    .container {
+      padding: 50px 0 0;
+      .text-area {
+        .title {
+          font-size: 33px;
+        }
+        .desc {
+          margin-top: 20px;
+          color: $dark-black;
+          font-size: 13px;
+          line-height: 21px;
+        }
+        .more {
+          width: 140px;
+          height: 42px;
+          margin-top: 28px;
+          span {
+            font-size: 11px;
+            line-height: 42px;
+          }
+        }
+      }
+      .swiper-container {
+        margin: 45px 0 0 7%;
+        .swiper-slide {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

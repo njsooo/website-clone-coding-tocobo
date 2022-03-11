@@ -1,0 +1,228 @@
+#community {
+  position: relative;
+  padding: 175px 0 150px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 170px;
+    background: linear-gradient(to top, #fff 5%, $sky-blue 40%);
+    z-index: -1;
+  }
+  .header {
+    text-align: center;
+    .title {
+      color: $black;
+      font-style: italic;
+      font-size: 33px;
+      font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+    }
+    .nav {
+      margin-top: 28px;
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            position: relative;
+            display: block;
+            color: $light-gray;
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+            transition: color 0.2s ease-in-out;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: $red;
+              transition: transform 0.3s;
+              transform: scaleX(0);
+              transform-origin: right;
+            }
+            &:hover {
+              color: $red;
+              &::after {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+            &.on {
+              color: $red;
+              &::after {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    margin-top: 70px;
+    color: $black;
+    .container {
+      > .title {
+        font-size: 23px;
+      }
+      .q-and-a-list {
+        $border-color: #bfd9eb;
+
+        margin-top: 30px;
+        border-top: 1px solid $border-color;
+        .q-and-a {
+          border-bottom: 1px solid $border-color;
+          letter-spacing: -0.05em;
+          .question {
+            $question-num-width: 70px;
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 32px 0;
+            cursor: pointer;
+            .num {
+              width: $question-num-width;
+              color: $red;
+              text-align: center;
+            }
+            .title {
+              @include text-one-line;
+
+              width: calc(100% - $question-num-width - 7%);
+              font-size: 15px;
+            }
+            .icon-plus {
+              @include icon-plus(16px, 2px, $black) {
+                top: -2px;
+                right: 42px;
+                bottom: 0;
+                margin: auto 0;
+              }
+            }
+          }
+          .answer {
+            display: none;
+            overflow: hidden;
+            padding: 40px 30px;
+            background-color: $sky-blue;
+            p {
+              margin-top: 8pt;
+              color: $black;
+              font-size: 13px;
+              font-family: "Noto Sans KR", sans-serif;
+              line-height: 1.5;
+              letter-spacing: -0.05em;
+              &:first-child {
+                margin-top: 0;
+              }
+              &.red {
+                color: $red;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        ol {
+          display: flex;
+          margin: 0 30px;
+          li {
+            margin-right: 7px;
+            &:last-child {
+              margin-right: 0;
+            }
+            a {
+              display: block;
+              width: 40px;
+              height: 40px;
+              color: $light-gray;
+              line-height: 40px;
+              text-align: center;
+              &.on {
+                background-color: $red;
+                color: #fff;
+              }
+            }
+          }
+        }
+        .btn-prev,
+        .btn-next {
+          width: 9px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  #community {
+    .content {
+      .container {
+        width: 89%;
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #community {
+    padding: 133px 0 70px;
+  }
+}
+
+@include media-phone-width {
+  #community {
+    .content {
+      .container {
+        > .title {
+          font-size: 16px;
+        }
+        .q-and-a-list {
+          .q-and-a {
+            .question {
+              $question-num-width: 40px;
+
+              padding: 26px 0;
+              &.on {
+                .title {
+                  font-weight: 500;
+                }
+              }
+              .num {
+                width: $question-num-width;
+                font-size: 14px;
+              }
+              .title {
+                width: calc(100% - $question-num-width - 7%);
+              }
+              .icon-plus {
+                right: 5px;
+                &::before,
+                &::after {
+                  height: 1px;
+                }
+              }
+            }
+            .answer {
+              padding: 30px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

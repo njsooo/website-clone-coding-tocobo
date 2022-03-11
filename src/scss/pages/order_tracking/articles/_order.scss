@@ -1,0 +1,20 @@
+#order {
+  @include form-area;
+  .find-actions {
+    @include form-find-actions;
+  }
+  .buttons {
+    margin-top: 30px;
+    > * {
+      font-size: 15px;
+      &.submit {
+        @include btn(100%, $btn-height-in-form, $red, $red, #fff);
+      }
+      &.join {
+        @include btn(100%, $btn-height-in-form, $red, #fff, $red);
+
+        margin-top: 10px;
+      }
+    }
+  }
+}

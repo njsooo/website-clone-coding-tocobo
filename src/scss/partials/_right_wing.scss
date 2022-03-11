@@ -1,0 +1,102 @@
+#right-wing {
+  $icon-width: 56px;
+
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+  z-index: 100;
+  &.on {
+    bottom: 20px;
+    opacity: 1;
+  }
+  .btn-to-top {
+    position: relative;
+    width: $icon-width;
+    height: $icon-width;
+    border-radius: 50%;
+    background-color: $blue;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+    svg {
+      position: absolute;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 21px;
+      height: 23px;
+      margin: auto;
+    }
+  }
+  .talk {
+    position: relative;
+    display: block;
+    width: $icon-width;
+    height: 88px;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 63px;
+      fill: $red;
+      z-index: -1;
+    }
+    .text-inside {
+      position: absolute;
+      top: 22px;
+      left: 14px;
+      color: #fff;
+      font-size: 15px;
+    }
+    .text-outside {
+      position: absolute;
+      bottom: 0;
+      left: 3px;
+      width: 100%;
+      color: $red;
+      font-weight: 600;
+      font-style: italic;
+      font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+    }
+  }
+}
+
+@include media-tablet-width {
+  #right-wing {
+    $icon-width: 46px;
+
+    right: 15px;
+    .btn-to-top {
+      width: $icon-width;
+      height: $icon-width;
+      svg {
+        width: 16px;
+      }
+    }
+    .talk {
+      width: $icon-width;
+      height: 75px;
+      svg {
+        height: 52px;
+      }
+      .text-inside {
+        position: absolute;
+        top: 19px;
+        left: 12px;
+        font-size: 12px;
+      }
+      .text-outside {
+        font-size: 13px;
+      }
+    }
+  }
+}

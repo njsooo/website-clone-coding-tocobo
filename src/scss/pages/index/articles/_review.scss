@@ -1,0 +1,194 @@
+#review {
+  background-color: $sky-blue;
+  .container {
+    position: relative;
+    width: 100%;
+    padding: 190px 0 130px;
+    .swiper-container {
+      .swiper-slide {
+        text-align: center;
+        opacity: 0.6;
+        &.swiper-slide-active {
+          opacity: 1;
+        }
+        .item {
+          position: relative;
+          display: inline-block;
+          padding-top: 35px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 116px;
+            height: 24px;
+            background: url("./assets/icons/png_sprite_sheet.png") -182px -5px;
+            transform: translateX(-50%);
+          }
+          .type {
+            color: $red;
+            font-size: 55px;
+            letter-spacing: 0.02em;
+          }
+          .title {
+            margin-top: 22px;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: -0.05em;
+          }
+          .desc {
+            margin-top: 16px;
+            color: $light-gray;
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: -0.05em;
+          }
+          .reviewer {
+            margin-top: 26px;
+            font-style: italic;
+            font-size: 15px;
+            font-family: "Source Serif Pro", sans-serif;
+          }
+        }
+      }
+      .swiper-pagination {
+        display: none;
+      }
+      .swiper-btn-prev-next-wrap {
+        @include absolute-center;
+
+        z-index: 10;
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 30px;
+          height: 57px;
+          background-image: none;
+          svg {
+            .mobile {
+              display: none;
+            }
+          }
+        }
+        .swiper-button-prev {
+          left: -480px;
+        }
+        .swiper-button-next {
+          right: -480px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  #review {
+    .container {
+      padding: 144px 0 80px;
+      .swiper-container {
+        .swiper-btn-prev-next-wrap {
+          width: 100%;
+          .swiper-button-prev {
+            left: 25%;
+          }
+          .swiper-button-next {
+            right: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #review {
+    // This code exists for article vegan skincare
+    margin-top: -50px;
+    .container {
+      .swiper-container {
+        .swiper-slide {
+          padding-bottom: 75px;
+          .item {
+            padding-top: 25px;
+            &::before {
+              width: 90px;
+              height: 19px;
+              background-position: -47px -78px;
+              background-size: calc($png-sprite-sheet-width / 2) calc($png-sprite-sheet-height / 2);
+            }
+          }
+        }
+        .swiper-pagination {
+          display: block;
+          .swiper-pagination-bullet {
+            width: 5px;
+            height: 5px;
+            margin: 0 5px;
+            border: 1px solid $blue;
+            background: #fff;
+            opacity: 1;
+          }
+          .swiper-pagination-bullet-active {
+            background: $blue;
+          }
+        }
+        .swiper-btn-prev-next-wrap {
+          top: auto;
+          bottom: 0;
+          width: auto;
+          transform: none;
+          .swiper-button-prev,
+          .swiper-button-next {
+            top: auto;
+            bottom: 5px;
+            width: 12px;
+            height: 21px;
+            svg {
+              .desktop {
+                display: none;
+              }
+              .mobile {
+                display: block;
+              }
+            }
+          }
+          .swiper-button-prev {
+            left: -70px;
+          }
+          .swiper-button-next {
+            right: -70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-phone-width {
+  #review {
+    // This code exists for article vegan skincare
+    margin-top: -113px;
+    .container {
+      padding: 160px 0 50px;
+      .swiper-container {
+        .swiper-slide {
+          .item {
+            .type {
+              font-size: 33px;
+            }
+            .title {
+              font-size: 15px;
+            }
+            .desc {
+              margin-top: 15px;
+              font-size: 12px;
+              line-height: 19px;
+            }
+            .reviewer {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

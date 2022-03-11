@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOCOBO | Community</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOCOBO" />
+    <meta property="og:title" content="community" />
+    <meta property="og:description" content="community page" />
+    <meta property="og:image" content="./assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.tocobo.co.kr/" />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="TOCOBO" />
+    <meta property="twitter:title" content="community" />
+    <meta property="twitter:description" content="community page" />
+    <meta property="twitter:image" content="./assets/images/logo.jpg" />
+    <meta property="twitter:url" content="https://www.tocobo.co.kr/" />
+    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+  </head>
+  <body>
+    <%= require('html-loader!@/html/partials/header.html').default %>
+    <!-- MAIN -->
+    <main>
+      <!-- COMMUNITY -->
+      <article id="community">
+        <div class="header">
+          <h2 class="title">Community</h2>
+          <nav class="nav">
+            <ul>
+              <li><a href="#" class="on">NOTICE</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">REVIEW</a></li>
+              <li><a href="/login.html">1:1 CS</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="content">
+          <div class="container">
+            <h3 class="title">NOTICE</h3>
+            <ul class="q-and-a-list">
+              <li class="q-and-a">
+                <div class="question">
+                  <span class="num">2</span>
+                  <h4 class="title">2022년 설 연휴 배송 마감&고객센터 휴무 안내</h4>
+                  <span class="icon-plus"></span>
+                </div>
+                <div class="answer">
+                  <p>안녕하세요.</p>
+                  <p>설 연휴로 인한 배송 및 고객 상담 휴무 일정 안내드립니다.</p>
+                  <p>&nbsp;</p>
+                  <p class="red">배송 일정</p>
+                  <p>
+                    1/26(수) 오후 2시 전 결제 건까지 설 연휴 이전 배송 가능하며, 이후 결제 건은
+                    2/3(목)부터 순차적으로 발송됩니다.
+                  </p>
+                  <p>
+                    명절 전 택배 물량 증가로 인해 택배사 집하까지만 처리되어 부득이하게 추석 연휴
+                    이후에 배송될 수 있는 점 양해 부탁드립니다.
+                  </p>
+                  <p>&nbsp;</p>
+                  <p class="red">고객센터 운영</p>
+                  <p>
+                    1/28(금) 오후 12시부터 주문 변경 및 취소를 포함한 모든 문의 및 상담 서비스가
+                    중단되며, 2/3(목)부터 순차 처리됩니다.
+                  </p>
+                  <p>1:1 CS 남겨주시면 순차적으로 빠른 처리 도와드리겠습니다.</p>
+                  <p>&nbsp;</p>
+                  <p>즐거운 설 명절 보내시길 바라며 새해 복 많이 받으세요.</p>
+                  <p>감사합니다.</p>
+                </div>
+              </li>
+              <li class="q-and-a">
+                <div class="question">
+                  <span class="num">1</span>
+                  <h4 class="title">토코보 배송 공지</h4>
+                  <span class="icon-plus"></span>
+                </div>
+                <div class="answer">
+                  <p class="red">배송 안내</p>
+                  <p>오후 2시 결제 건까지 당일 출고</p>
+                  <p>&nbsp;</p>
+                  <p class="red">배송비 정책</p>
+                  <p>전 제품 무료배송</p>
+                  <p>&nbsp;</p>
+                  <p class="red">배송 택배사</p>
+                  <p>
+                    CJ대한통운을 통해 배송되며 파업으로 인한 배달 불가 지역은 자동으로 취소될 수
+                    있습니다.
+                  </p>
+                  <p>
+                    당일 오후 2시 이전 입금 확인 분에 한해서 당일 출고를 원칙으로 하고 있습니다.
+                  </p>
+                  <p>
+                    당일 발송한 물건은 대부분 다음날 받아보실 수 있으며(토, 일, 공휴일, 도서 산간
+                    지방 제외) 물류 사정에 따라 다소 차이가 있을 수 있습니다.
+                  </p>
+                  <p>주문 접수 후 7일 이내 입금이 확인되지 않는 경우 자동으로 취소 처리됩니다.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="pagination">
+              <button type="button" class="btn-prev" aria-label="이전 목록">
+                <svg>
+                  <use href="./assets/icons/svg_sprite_sheet.svg#pagination-arrow-prev"></use>
+                </svg>
+              </button>
+              <ol>
+                <li><a href="#" class="on">1</a></li>
+                <li><a href="#">2</a></li>
+              </ol>
+              <button type="button" class="btn-next" aria-label="다음 목록">
+                <svg>
+                  <use href="./assets/icons/svg_sprite_sheet.svg#pagination-arrow-next"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- // COMMUNITY -->
+    </main>
+    <!-- // MAIN -->
+    <!-- FOOTER -->
+    <%= require('html-loader!@/html/partials/footer.html').default %>
+    <!-- MODAL SEARCH -->
+    <%= require('html-loader!@/html/partials/modal_search.html').default %>
+    <!-- RIGHT WING -->
+    <%= require('html-loader!@/html/partials/right_wing.html').default %>
+  </body>
+</html>

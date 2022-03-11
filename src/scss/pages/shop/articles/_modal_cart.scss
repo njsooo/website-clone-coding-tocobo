@@ -1,0 +1,191 @@
+#modal-cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  &.on {
+    .bg {
+      background-color: rgb(255 255 255 / 80%);
+    }
+    .content {
+      transform: translateX(0);
+    }
+  }
+  .bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s;
+    z-index: 1;
+  }
+  .content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: scroll;
+    width: 500px;
+    height: 100%;
+    background-color: $sky-blue;
+    transition: transform 0.5s;
+    transform: translateX(100%);
+    z-index: 1000;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .header {
+      > .btn-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 35px;
+        height: 35px;
+      }
+      .title {
+        padding: 2rem 0;
+        color: $black;
+        font-style: italic;
+        font-size: 2rem;
+        font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+        line-height: 35px;
+        text-align: center;
+      }
+    }
+    .body {
+      $padding-left-right: 30px;
+      .banner {
+        display: block;
+        padding: 0 $padding-left-right;
+      }
+      .item-list {
+        overflow-y: scroll;
+        min-height: 277px;
+        max-height: 400px;
+        margin-top: 25px;
+        padding: 0 $padding-left-right;
+        &::-webkit-scrollbar {
+          width: $scrollbar-desktop-width;
+          height: $scrollbar-desktop-height;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: $scrollbar-border-radius;
+          background-color: $scrollbar-thumb-bg-color;
+        }
+        .item {
+          display: flex;
+          padding: 25px 0;
+          border-bottom: 1px solid #d2e2ed;
+          &:first-child {
+            padding-top: 0;
+          }
+          .img-wrap {
+            overflow: hidden;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+          }
+          .metadata {
+            color: $black;
+            .name {
+              font-weight: 500;
+              font-size: 15px;
+              letter-spacing: -0.05em;
+            }
+            .amount {
+              margin: 15px 0;
+              font-size: 13px;
+              letter-spacing: -0.05em;
+              .text-ko {
+                position: relative;
+                padding-right: 8px;
+                &::after {
+                  @include vertical-bar {
+                    top: -1px;
+                  }
+                }
+              }
+              .num {
+                padding-left: 4px;
+              }
+            }
+            .price {
+              font-weight: 600;
+              font-style: italic;
+              font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+            }
+          }
+        }
+      }
+      .buttons {
+        padding: $padding-left-right;
+        font-size: 14px;
+        .check-out {
+          @include btn-has-hover(100%, $btn-height, $red, $red, #fff, $red, #fff, $red);
+        }
+        .wrap {
+          $margin-right: 10px;
+
+          display: flex;
+          margin-top: 10px;
+          .cart {
+            @include btn-has-hover(calc((100% - $margin-right) / 2), $btn-height, $red, #fff, $red, $red, $red, #fff);
+
+            margin-right: $margin-right;
+          }
+          > .btn-close {
+            @include btn-has-hover(calc((100% - $margin-right) / 2), $btn-height, $red, #fff, $red, $red, $red, #fff);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #modal-cart {
+    .content {
+      width: 100%;
+      .header {
+        .title {
+          padding: 19px 0;
+          font-size: 25px;
+        }
+        > .btn-close {
+          top: 20px;
+          right: 15px;
+        }
+      }
+      .body {
+        $padding-left-right: 20px;
+        .banner {
+          padding: 0 $padding-left-right;
+        }
+        .item-list {
+          padding: 0 $padding-left-right;
+          &::-webkit-scrollbar {
+            width: $scrollbar-mobile-width;
+          }
+          .item {
+            padding: $padding-left-right 0;
+            .img-wrap {
+              width: 110px;
+              height: 110px;
+              margin-right: 15px;
+            }
+            .metadata {
+              .amount {
+                margin-bottom: 48px;
+              }
+            }
+          }
+        }
+        .buttons {
+          padding: 30px 15px;
+        }
+      }
+    }
+  }
+}

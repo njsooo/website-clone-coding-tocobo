@@ -1,0 +1,14 @@
+@mixin font-face($font-family, $font-weight, $font-style, $src) {
+  @font-face {
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-family: $font-family;
+    src:
+      url("#{$src}.woff2") format("woff2"),
+      url("#{$src}.woff") format("woff");
+  }
+}
+
+@include font-face("Circular Std", 400, "normal", "./assets/fonts/Circular_Std_Book");
+@include font-face("Circular Std", 500, "normal", "./assets/fonts/Circular_Std_Medium");
+@include font-face("Florencesans", 700, "normal", "./assets/fonts/Florencesans_Bold");

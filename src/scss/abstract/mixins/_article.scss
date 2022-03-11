@@ -1,0 +1,10 @@
+@mixin greeting {
+  color: $blue;
+  font-size: 19px;
+  font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+}
+
+@mixin greeting-title {
+  color: $red;
+  font-size: 60px;
+}

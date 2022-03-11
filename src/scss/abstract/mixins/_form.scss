@@ -1,0 +1,76 @@
+@mixin form-area {
+  padding: 150px 0;
+  background-color: $sky-blue;
+  input[type="checkbox"] {
+    @include blind;
+  }
+  .container {
+    width: 530px;
+    padding: 60px 50px;
+    border-radius: 20px;
+    background-color: #fff;
+    > .title {
+      @include form-title;
+    }
+    form {
+      input[type="text"],
+      input[type="password"] {
+        @include input;
+      }
+      .select-wrap {
+        @include select-wrap;
+        select {
+          @include select;
+        }
+      }
+    }
+  }
+  @media (max-width: #{$break-point-tablet-width}) {
+    padding: 120px 0;
+    background-color: #fff;
+    .container {
+      width: 100%;
+      padding: 0 28px;
+      > .title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@mixin form-title {
+  margin-bottom: 40px;
+  color: $black;
+  font-style: italic;
+  font-size: 27px;
+  font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@mixin form-find-actions {
+  display: flex;
+  margin-top: 20px;
+  li {
+    a {
+      color: #2b2b2b;
+      font-size: 14px;
+      font-family: "Noto Sans KR", sans-serif;
+      letter-spacing: -0.05em;
+    }
+    &:first-child {
+      position: relative;
+      margin-right: 30px;
+      a {
+        &::after {
+          @include vertical-bar(13px);
+
+          right: -16px;
+        }
+      }
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}

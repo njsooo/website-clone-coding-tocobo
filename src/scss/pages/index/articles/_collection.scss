@@ -1,0 +1,173 @@
+#collection {
+  padding: 100px 0 90px;
+  background-color: $sky-blue;
+  .header {
+    text-align: center;
+    .title {
+      color: $red;
+      font-size: 50px;
+    }
+    .desc {
+      margin-top: 20px;
+      color: $blue;
+      font-size: 19px;
+    }
+  }
+  .content {
+    margin-top: 70px;
+    .container {
+      position: relative;
+      .swiper-button-prev,
+      .swiper-button-next {
+        top: 48%;
+        width: 35px;
+        height: 67px;
+        background-image: none;
+      }
+      .swiper-button-prev {
+        left: -70px;
+      }
+      .swiper-button-next {
+        right: -70px;
+      }
+      .swiper-container {
+        padding-bottom: 50px;
+        .item {
+          text-align: center;
+          .top {
+            .type {
+              @include btn(auto, 39px, $blue, transparent, $blue);
+
+              padding: 0 18px;
+              font-weight: 500;
+              font-size: 13px;
+              letter-spacing: -0.05em;
+            }
+            .name-en {
+              display: block;
+              margin-top: 20px;
+              color: $black;
+              font-size: 20px;
+              font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+            }
+            .name-ko {
+              display: block;
+              margin-top: 15px;
+              color: $black;
+              font-weight: 500;
+              font-size: 15px;
+            }
+          }
+          .img-wrap {
+            display: block;
+            overflow: hidden;
+            margin-top: 25px;
+            border-radius: 10px;
+            background-color: #fff;
+          }
+          .bottom {
+            margin-top: 30px;
+            .size {
+              display: block;
+              color: $black;
+              font-style: italic;
+              font-family: "Source Serif Pro", "Noto Sans KR", sans-serif;
+            }
+            .price {
+              display: block;
+              margin-top: 15px;
+              font-size: 20px;
+            }
+          }
+        }
+        .swiper-pagination {
+          top: auto;
+          bottom: 0;
+          height: 2px;
+          background-color: #fff;
+          .swiper-pagination-progressbar-fill {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  #collection {
+    .content {
+      .container {
+        width: 75.75%;
+        max-width: 1280px;
+      }
+    }
+  }
+}
+
+@include media-tablet-width {
+  #collection {
+    .content {
+      .container {
+        width: 100%;
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: none;
+        }
+        .swiper-container {
+          .swiper-pagination {
+            left: 50%;
+            width: 78%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-phone-width {
+  #collection {
+    padding: 55px 0 50px;
+    .header {
+      .title {
+        font-size: 23px;
+      }
+      .desc {
+        display: none;
+      }
+    }
+    .content {
+      margin-top: 30px;
+      .container {
+        .swiper-container {
+          .item {
+            .top {
+              .type {
+                font-weight: 400;
+                font-size: 11px;
+              }
+              .name-en {
+                margin-top: 15px;
+                font-size: 16px;
+              }
+              .name-ko {
+                margin-top: 9px;
+                font-size: 14px;
+              }
+            }
+            .img-wrap {
+              margin-top: 20px;
+            }
+            .bottom {
+              margin-top: 20px;
+              .price {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

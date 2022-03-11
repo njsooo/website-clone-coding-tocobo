@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOCOBO | Join</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TOCOBO" />
+    <meta property="og:title" content="join" />
+    <meta property="og:description" content="join page" />
+    <meta property="og:image" content="./assets/images/logo.jpg" />
+    <meta property="og:url" content="https://www.tocobo.co.kr/" />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="TOCOBO" />
+    <meta property="twitter:title" content="join" />
+    <meta property="twitter:description" content="join page" />
+    <meta property="twitter:image" content="./assets/images/logo.jpg" />
+    <meta property="twitter:url" content="https://www.tocobo.co.kr/" />
+    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+  </head>
+  <body>
+    <%= require('html-loader!@/html/partials/header.html').default %>
+    <!-- MAIN -->
+    <main>
+      <!-- LOGIN -->
+      <article id="join">
+        <div class="container">
+          <h2 class="title">Sign up</h2>
+          <form action="#">
+            <div class="input-wrap id">
+              <label for="id">아이디<span class="asterisk">*</span></label>
+              <input
+                type="text"
+                id="id"
+                placeholder="아이디를 입력해주세요"
+                title="아이디를 입력해주세요"
+                aria-required="true"
+              />
+              <p class="msg"></p>
+            </div>
+            <div class="input-wrap pw">
+              <label for="pw">비밀번호<span class="asterisk">*</span></label>
+              <input
+                type="password"
+                id="pw"
+                maxlength="16"
+                placeholder="비밀번호"
+                title="비밀번호"
+                aria-required="true"
+              />
+              <div class="pw-tip">
+                <button type="button" class="btn-close" aria-label="비밀번호 입력 조건창 닫기">
+                  &#x2716;
+                </button>
+                <h5 class="title">※ 비밀번호 입력 조건</h5>
+                <div class="content">
+                  - 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자<br />
+                  - 입력 가능 특수문자<br />
+                  &nbsp;&nbsp;&nbsp; ~ ` ! @ # $ % ^ ( ) _ - = { } [ ] | ; : &lt; &gt; , . ? /<br />
+                  - 공백 입력 불가능
+                </div>
+              </div>
+              <p class="msg">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+            </div>
+            <div class="input-wrap pw-check">
+              <label for="pw-check">비밀번호 확인<span class="asterisk">*</span></label>
+              <input
+                id="pw-check"
+                type="password"
+                placeholder="비밀번호 확인"
+                title="비밀번호 확인"
+                aria-required="true"
+              />
+              <p class="msg"></p>
+            </div>
+            <div class="input-wrap name">
+              <label for="name">이름<span class="asterisk">*</span></label>
+              <input type="text" id="name" placeholder="이름" title="이름" aria-required="true" />
+              <p class="msg"></p>
+            </div>
+            <div class="input-wrap phone-number">
+              <label for="phone-number">휴대전화<span class="asterisk">*</span></label>
+              <div class="flex-wrap">
+                <div class="select-wrap">
+                  <select id="phone-number" title="휴대전화 세자리" aria-required="true">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="018">018</option>
+                    <option value="019">019</option>
+                  </select>
+                </div>
+                <span class="hyphen">-</span>
+                <input type="text" maxlength="4" title="휴대전화 앞 네자리" aria-required="true" />
+                <span class="hyphen">-</span>
+                <input type="text" maxlength="4" title="휴대전화 뒷 네자리" aria-required="true" />
+              </div>
+              <p class="msg"></p>
+            </div>
+            <div class="input-wrap email">
+              <label for="email">이메일<span class="asterisk">*</span></label>
+              <input
+                type="text"
+                id="email"
+                placeholder="이메일"
+                title="이메일"
+                aria-required="true"
+              />
+              <p class="msg"></p>
+            </div>
+            <div class="input-wrap birth-date">
+              <label for="birth-date">생년월일<span class="asterisk">*</span></label>
+              <div class="flex-wrap">
+                <input
+                  type="text"
+                  id="birth-date"
+                  maxlength="4"
+                  placeholder="YYYY"
+                  title="생년월일 중 년도"
+                  aria-required="true"
+                />
+                <input
+                  type="text"
+                  maxlength="2"
+                  placeholder="MM"
+                  title="생년월일 중 월"
+                  aria-required="true"
+                />
+                <input
+                  type="text"
+                  maxlength="2"
+                  placeholder="DD"
+                  title="생년월일 중 일"
+                  aria-required="true"
+                />
+              </div>
+              <p class="msg"></p>
+            </div>
+            <div class="terms-area">
+              <div class="agree-all">
+                <input type="checkbox" id="agree-all" />
+                <label for="agree-all">
+                  <span>전체 약관에 동의합니다</span>
+                </label>
+              </div>
+              <div class="terms-list">
+                <div class="terms">
+                  <input type="checkbox" id="terms-shopmail" />
+                  <label for="terms-shopmail">
+                    <span class="text">쇼핑몰 이용약관에 모두 동의 합니다.</span>
+                    <span class="type">(필수)</span>
+                  </label>
+                  <button
+                    type="button"
+                    class="btn-toggle-terms-detail"
+                    aria-label="약관 내용 열기"
+                  ></button>
+                  <div class="terms-detail-wrap">
+                    <div class="terms-detail">
+                      <p>
+                        이 약관은 픽톤㈜(이하 "회사"라 한다)가 운영하는 인터넷 쇼핑몰(이하
+                        "쇼핑몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를
+                        이용함에 있어 쇼핑몰과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로
+                        합니다. PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 그 성질에
+                        반하지 않는 한 이 약관을 준용합니다.
+                      </p>
+                      <p>
+                        01. "쇼핑몰" 이란 회사가 재화 또는 용역(이하 "재화등"이라 한다)을 이용자에게
+                        제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화등을 거래할 수 있도록
+                        설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도
+                        사용합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="terms">
+                  <input type="checkbox" id="terms-privacy" />
+                  <label for="terms-privacy">
+                    <span class="text">개인정보 수집 및 이용에 동의 합니다.</span>
+                    <span class="type">(필수)</span>
+                  </label>
+                  <button
+                    type="button"
+                    class="btn-toggle-terms-detail"
+                    aria-label="약관 내용 열기"
+                  ></button>
+                  <div class="terms-detail-wrap">
+                    <div class="terms-detail">
+                      <p>
+                        이 약관은 픽톤㈜(이하 "회사"라 한다)가 운영하는 인터넷 쇼핑몰(이하
+                        "쇼핑몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를
+                        이용함에 있어 쇼핑몰과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로
+                        합니다. PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 그 성질에
+                        반하지 않는 한 이 약관을 준용합니다.
+                      </p>
+                      <p>
+                        01. "쇼핑몰" 이란 회사가 재화 또는 용역(이하 "재화등"이라 한다)을 이용자에게
+                        제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화등을 거래할 수 있도록
+                        설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도
+                        사용합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="terms">
+                  <input type="checkbox" id="terms-marketing" />
+                  <label for="terms-marketing">
+                    <span class="text">마케팅 정보수신 및 활용에 동의합니다.</span>
+                    <span class="type">(선택)</span>
+                  </label>
+                  <button
+                    type="button"
+                    class="btn-toggle-terms-detail"
+                    aria-label="약관 내용 열기"
+                  ></button>
+                  <div class="terms-detail-wrap">
+                    <div class="terms-detail">
+                      <p>
+                        이 약관은 픽톤㈜(이하 "회사"라 한다)가 운영하는 인터넷 쇼핑몰(이하
+                        "쇼핑몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를
+                        이용함에 있어 쇼핑몰과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로
+                        합니다. PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 그 성질에
+                        반하지 않는 한 이 약관을 준용합니다.
+                      </p>
+                      <p>
+                        01. "쇼핑몰" 이란 회사가 재화 또는 용역(이하 "재화등"이라 한다)을 이용자에게
+                        제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화등을 거래할 수 있도록
+                        설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도
+                        사용합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="terms">
+                  <input type="checkbox" id="terms-age" />
+                  <label for="terms-age">
+                    <span class="text">만 14세 이상입니다.</span>
+                    <span class="type">(필수)</span>
+                  </label>
+                  <button
+                    type="button"
+                    class="btn-toggle-terms-detail"
+                    aria-label="약관 내용 열기"
+                  ></button>
+                  <div class="terms-detail-wrap">
+                    <div class="terms-detail">
+                      <p>
+                        이 약관은 픽톤㈜(이하 "회사"라 한다)가 운영하는 인터넷 쇼핑몰(이하
+                        "쇼핑몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를
+                        이용함에 있어 쇼핑몰과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로
+                        합니다. PC통신, 모바일 무선 등을 이용하는 전자상거래에 대해서는 그 성질에
+                        반하지 않는 한 이 약관을 준용합니다.
+                      </p>
+                      <p>
+                        01. "쇼핑몰" 이란 회사가 재화 또는 용역(이하 "재화등"이라 한다)을 이용자에게
+                        제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화등을 거래할 수 있도록
+                        설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도
+                        사용합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit">SIGN UP</button>
+          </form>
+        </div>
+      </article>
+      <!-- // LOGIN -->
+    </main>
+    <!-- // MAIN -->
+    <!-- FOOTER -->
+    <%= require('html-loader!@/html/partials/footer.html').default %>
+    <!-- MODAL SEARCH -->
+    <%= require('html-loader!@/html/partials/modal_search.html').default %>
+    <!-- RIGHT WING -->
+    <%= require('html-loader!@/html/partials/right_wing.html').default %>
+  </body>
+</html>

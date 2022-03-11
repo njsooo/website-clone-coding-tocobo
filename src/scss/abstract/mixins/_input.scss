@@ -1,0 +1,47 @@
+@mixin input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin-top: 13px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #f1f9ff;
+  color: #353535;
+  font-size: 15px;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:focus {
+    outline: 1px solid $blue;
+    background-color: #fff;
+  }
+}
+
+@mixin custom-label-checkbox {
+  input[type="checkbox"] {
+    &:checked {
+      + label {
+        &::before {
+          border-color: $blue;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+  label {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #9c9c9c;
+      border-radius: 4px;
+    }
+    &::after {
+      @include icon-arrow(4px, 8px, 2px, #fff, transparent, 45deg);
+    }
+  }
+}
